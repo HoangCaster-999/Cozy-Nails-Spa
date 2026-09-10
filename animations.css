@@ -1,0 +1,142 @@
+/* ==========================================================================
+   animations.css — losse animatielaag bovenop styles.css / overrides.css.
+   Raakt geen bestaande regels aan; alles hangt aan eigen classes die
+   animations.js toevoegt. Verwijder de <link> om alles uit te zetten.
+   ========================================================================== */
+
+:root {
+  --anim-e: cubic-bezier(.22, 1, .36, 1);
+}
+
+/* ---------- 1. tekst per letter ---------- */
+.split .word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  /* ruimte voor staarten van g/j/y, anders knipt overflow ze af */
+  padding-bottom: .12em;
+  margin-bottom: -.12em;
+}
+.split .char {
+  display: inline-block;
+  transform: translateY(115%);
+  transition: transform .9s var(--anim-e);
+  transition-delay: calc(var(--c, 0) * .028s);
+  will-change: transform;
+}
+.split.visible .char { transform: none; }
+
+/* ---------- 2. clip-wipe op galerij-afbeeldingen ----------
+   Alleen waar de ouder al overflow:hidden + border-radius heeft, anders
+   zou clip-path de vormgeving van de afbeelding overschrijven. */
+.gallery-tile img {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1.15s var(--anim-e), transform .65s;
+}
+.gallery-tile.visible img { clip-path: inset(0 0 0 0); }
+
+/* ---------- 3. beeld dat oprijst (waar border-radius de vorm bepaalt) ---------- */
+.rise-img img {
+  opacity: 0;
+  transform: translateY(34px) scale(.965);
+  transition: opacity .95s ease, transform 1.15s var(--anim-e);
+  will-change: transform;
+}
+.rise-img.visible img { opacity: 1; transform: none; }
+
+/* ---------- 4. gouden lijn die zich tekent ---------- */
+.gold-line {
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .9s var(--anim-e) .25s;
+}
+.visible .gold-line,
+.gold-line.visible { transform: scaleX(1); }
+
+/* ---------- 5. getrapte veeg over de knoppen (steps) ---------- */
+.header-book,
+.round-book,
+.booking-button,
+.instagram-link {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.header-book::before,
+.round-book::before,
+.booking-button::before,
+.instagram-link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: rgba(255, 255, 255, .22);
+  transform: translateX(-101%);
+}
+.booking-button::before { background: rgba(63, 44, 53, .12); }
+.instagram-link::before { background: rgba(198, 164, 108, .18); }
+
+.header-book:hover::before,
+.round-book:hover::before,
+.booking-button:hover::before,
+.instagram-link:hover::before {
+  animation: sweep-steps .5s steps(9) forwards;
+}
+@keyframes sweep-steps {
+  to { transform: translateX(101%); }
+}
+
+/* ---------- 6. stagger voor kaarten en tegels ---------- */
+.stagger { transition-delay: calc(var(--i, 0) * .09s) !important; }
+
+/* ---------- 7. scroll-voortgang ---------- */
+.anim-progress {
+  position: fixed;
+  z-index: 200;
+  inset: 0 0 auto;
+  height: 2px;
+  pointer-events: none;
+}
+.anim-progress i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--lavender, #e2d2ed), var(--sand, #c6a46c), var(--wine, #3f2c35));
+  transform: scaleX(var(--p, 0));
+  transform-origin: 0 50%;
+}
+
+/* ---------- 8. prijsrijen die inzakken bij tabwissel ---------- */
+.price-content.active .price-grid > div {
+  animation: row-in .55s var(--anim-e) both;
+  animation-delay: calc(var(--r, 0) * .045s);
+}
+@keyframes row-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- 9. FAQ ---------- */
+.faq details summary span { transition: transform .3s var(--anim-e); display: inline-block; }
+.faq details[open] summary span { transform: rotate(135deg); }
+.faq details[open] > p { animation: row-in .45s var(--anim-e) both; }
+
+/* ---------- 10. zachte drift op de sierelementen ---------- */
+.soft-orbit { animation: drift 13s ease-in-out infinite; }
+.booking-art i { animation: drift 9s ease-in-out -3s infinite reverse; }
+@keyframes drift {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -20px; }
+}
+
+/* ---------- respect voor gebruikersvoorkeur ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .split .char { transform: none !important; }
+  .gallery-tile img { clip-path: none !important; }
+  .rise-img img { opacity: 1 !important; transform: none !important; }
+  .gold-line { transform: scaleX(1) !important; }
+  .soft-orbit, .booking-art i { animation: none !important; }
+  .price-content.active .price-grid > div,
+  .faq details[open] > p { animation: none !important; }
+  .header-book::before, .round-book::before,
+  .booking-button::before, .instagram-link::before { display: none; }
+}
