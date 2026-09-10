@@ -1,0 +1,4 @@
+@media (max-width: 1050px) {
+  .header { backdrop-filter: none; }
+  .nav { min-height: 100svh; }
+}

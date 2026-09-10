@@ -3,445 +3,81 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cozy Nails &amp; Spa — thuissalon voor manicure, pedicure, gellak, acryl, BIAB, nail art en head spa. Boek eenvoudig online je afspraak.">
-  <meta name="theme-color" content="#6d4055">
-  <title>Cozy Nails &amp; Spa</title>
-  <link rel="canonical" href="https://cozy-nailsspa.com/">
-
-  <link rel="icon" href="assets/favicon.ico" sizes="32x32">
-  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
-  <link rel="icon" href="assets/icon-192.png" type="image/png" sizes="192x192">
-  <link rel="apple-touch-icon" href="assets/icon-180.png">
-
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Cozy Nails &amp; Spa">
-  <meta property="og:title" content="Cozy Nails &amp; Spa">
-  <meta property="og:description" content="Thuissalon voor manicure, pedicure, gellak, acryl, BIAB, nail art en head spa. Boek eenvoudig online je afspraak.">
-  <meta property="og:url" content="https://cozy-nailsspa.com/">
-  <meta property="og:locale" content="nl_NL">
-  <meta property="og:image" content="https://cozy-nailsspa.com/assets/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cozy Nails &amp; Spa">
-  <meta name="twitter:description" content="Thuissalon voor manicure, pedicure, gellak, acryl, BIAB, nail art en head spa.">
-  <meta name="twitter:image" content="https://cozy-nailsspa.com/assets/og-image.png">
-
+  <meta name="description" content="Cozy Nails & Spa — manicure, pedicure, BIAB, gellak en head spa in een rustige sfeer.">
+  <meta name="theme-color" content="#fbf8f3">
+  <title>Cozy Nails & Spa</title>
+  <link rel="icon" href="assets/cozy-logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="overrides.css">
+  <style>.hero-image{-webkit-mask-image:radial-gradient(ellipse 55% 80% at 50% 48%,#000 0 55%,transparent 82%);mask-image:radial-gradient(ellipse 55% 80% at 50% 48%,#000 0 55%,transparent 82%)}</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Ga naar inhoud</a>
-  <div class="scroll-progress" aria-hidden="true"><span data-progress></span></div>
-
-  <header class="site-header" data-header>
-    <a class="wordmark" href="#top" aria-label="Cozy Nails &amp; Spa — home">
-      <img src="assets/cozy-logo.png" alt="" width="62" height="62">
-      <span>Cozy <small>Nails &amp; Spa</small></span>
-    </a>
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
-      <span></span><span></span><span></span><span class="sr-only">Menu</span>
-    </button>
-    <nav id="site-nav" class="site-nav" aria-label="Hoofdnavigatie">
-      <div class="nav-links">
-        <a href="#studio" data-spy><i aria-hidden="true">01</i>Studio</a>
-        <a href="#behandelingen" data-spy><i aria-hidden="true">02</i>Behandelingen</a>
-        <a href="#looks" data-spy><i aria-hidden="true">03</i>Looks</a>
-        <a href="#prijzen" data-spy><i aria-hidden="true">04</i>Prijzen</a>
-        <a href="#boeken" data-spy><i aria-hidden="true">05</i>Boeken</a>
-      </div>
-      <a class="nav-cta" href="#boeken">Afspraak maken</a>
-      <div class="nav-foot">
-        <a href="tel:+31629193391">+31 629 193 391</a>
-        <a href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer">@cozynailsspa_nl</a>
-      </div>
-    </nav>
+  <header class="header" data-header>
+    <a class="brand" href="#top" aria-label="Cozy Nails & Spa — home"><img src="assets/cozy-logo.png" alt="" width="48" height="48"><span>Cozy Nails & Spa</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span><b class="sr-only">Menu</b></button>
+    <nav id="nav" class="nav" aria-label="Hoofdnavigatie"><a href="#over-ons">Over ons</a><a href="#services">Behandelingen & prijzen</a><a href="#gallery">Galerie</a><a href="#booking">Boeken</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+    <a class="header-book booking-link" href="#booking">Boeken</a>
   </header>
 
   <main id="main">
-    <!-- ===================== HERO ===================== -->
     <section class="hero" id="top">
-      <div class="hero-media">
-        <img class="hero-image" src="assets/hero-nails.png" alt="Verzorgde milky nude nagels in een rustige spa-sfeer" data-parallax="0.07">
-        <div class="hero-wash"></div>
+      <div class="hero-halo" aria-hidden="true"></div>
+      <div class="hero-words hero-left" aria-hidden="true"><span>Rustige</span><span>Verzorgde</span></div>
+      <img class="hero-image" src="assets/hero-sculptural.png" alt="Twee elegante handen met een zachte nude manicure">
+      <div class="hero-words hero-right" aria-hidden="true"><span>Momenten.</span><span>Nagels.</span></div>
+      <h1 class="sr-only">Rustige momenten. Verzorgde nagels.</h1>
+      <a class="round-book booking-link" href="#booking">Boeken <span>↗</span></a>
+      <p class="hero-scroll">Scroll om te ontdekken <span>↓</span></p>
+    </section>
+
+    <section class="about section" id="over-ons">
+      <div class="arch-wrap reveal"><div class="soft-orbit"></div><img src="assets/pedicure-spa.png" alt="Ontspannende spa pedicure in een rustige salon"></div>
+      <div class="about-copy reveal"><p class="eyebrow">Over ons</p><h2>Jouw rustige<br><em>beauty moment.</em></h2><span class="gold-line"></span><p>Een verzorgde, warme plek waar aandacht en precisie samenkomen. Van mooie nagels tot een ontspannen head spa — alles in jouw tempo.</p><div class="about-dots" aria-hidden="true"><i></i><i></i><i></i></div></div>
+    </section>
+
+    <section class="services section" id="services">
+      <div class="center-heading reveal"><p class="eyebrow">Behandelingen & prijzen</p><h2>Onze behandelingen</h2><span class="gold-line"></span><p>Van een frisse gellak tot uitgebreide verzorging. We werken rustig, hygiënisch en met aandacht voor elk detail.</p></div>
+      <div class="service-arches">
+        <article class="service-card reveal"><div class="service-image"><img src="assets/nail-lavender.png" alt="Milky nude en lavendel manicure"></div><h3>Nail design</h3><p>Acryl · Gellak · BIAB · Nail art</p></article>
+        <article class="service-card service-card-raised reveal"><div class="service-image"><img src="assets/hero-nails.png" alt="Verzorgde nude manicure op zachte spa handdoeken"></div><h3>Manicure</h3><p>Vijlen · Verzorging · Gellak</p></article>
+        <article class="service-card reveal"><div class="service-image"><img src="assets/pedicure-spa.png" alt="Warme en verzorgende spa pedicure"></div><h3>Pedicure & Head Spa</h3><p>Relax · Refresh · Restore</p></article>
       </div>
 
-      <div class="hero-inner">
-        <p class="eyebrow">Thuissalon · Nederland</p>
-        <h1 class="hero-title" data-split>Een moment<br><em>voor jezelf.</em></h1>
-        <p class="hero-copy">Zachte verzorging, rustige luxe en aandacht voor elk detail — in een warme, persoonlijke salon.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#boeken">Afspraak maken <span aria-hidden="true">↗</span></a>
-          <a class="button button-ghost" href="#prijzen">Bekijk prijzen</a>
+      <div class="price-panel reveal">
+        <div class="price-tabs" role="tablist" aria-label="Prijscategorieën">
+          <button class="active" type="button" role="tab" aria-selected="true" data-price-tab="acryl">Acryl</button><button type="button" role="tab" aria-selected="false" data-price-tab="gellak">Gellak</button><button type="button" role="tab" aria-selected="false" data-price-tab="biab">BIAB</button><button type="button" role="tab" aria-selected="false" data-price-tab="manicure">Manicure</button><button type="button" role="tab" aria-selected="false" data-price-tab="pedicure">Pedicure</button>
         </div>
-        <div class="hero-rail">
-          <span class="chip" data-status hidden></span>
-          <a class="chip chip-link" href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer">@cozynailsspa_nl <b aria-hidden="true">↗</b></a>
-        </div>
+        <div class="price-content active" role="tabpanel" data-price-panel="acryl"><h3>Acryl nagelset</h3><div class="price-grid"><div><span>Nieuwe set acrylnagels <small>witte, parelmoer of naturel tips</small></span><b>€50</b></div><div><span>Nieuwe set + Gellak</span><b>€55</b></div><div><span>Nieuwe set met design <small>babyboom, French manicure, glitter</small></span><b>v.a. €55</b></div><div><span>Nieuwe set pink nude</span><b>€50</b></div><div><span>Nieuwe set op eigen nagels</span><b>€45</b></div><div><span>Opvullen naturel</span><b>€40</b></div><div><span>Opvullen met gellak</span><b>€45</b></div><div><span>Acrylnagels verwijderen</span><b>€15</b></div><div><span>Nail art</span><b>€2,50 / nagel</b></div></div></div>
+        <div class="price-content" role="tabpanel" data-price-panel="gellak" hidden><h3>Gellak</h3><div class="price-grid"><div><span>Gellak</span><b>€25</b></div><div><span>Gellak French</span><b>€35</b></div><div><span>Gellak teennagels</span><b>€25</b></div><div><span>Gellak verwijderen</span><b>€10</b></div><div><span>Speciale design nagels</span><b>In overleg</b></div></div></div>
+        <div class="price-content" role="tabpanel" data-price-panel="biab" hidden><h3>BIAB</h3><div class="price-grid"><div><span>Nieuwe set BIAB</span><b>€50</b></div><div><span>BIAB met korte verlenging</span><b>€60</b></div><div><span>BIAB opvullen</span><b>€45</b></div><div><span>Nagelreparatie</span><b>€7</b></div></div></div>
+        <div class="price-content" role="tabpanel" data-price-panel="manicure" hidden><h3>Manicure</h3><div class="price-grid"><div><span>Manicure</span><b>€20</b></div><div><span>Manicure + Gellak</span><b>€40</b></div><div><span>Nagelreparatie</span><b>€5</b></div></div></div>
+        <div class="price-content" role="tabpanel" data-price-panel="pedicure" hidden><h3>Pedicure</h3><div class="price-grid"><div><span>Spa pedicure</span><b>€40</b></div><div><span>Pedicure + Gellak</span><b>€50</b></div><div><span>Nagelreparatie</span><b>€5</b></div></div></div>
       </div>
     </section>
 
-    <div class="marquee" aria-hidden="true" data-marquee>
-      <div class="marquee-track">
-        <span>Manicure <b>✦</b> Pedicure <b>✦</b> Head Spa <b>✦</b> Nail Art <b>✦</b> BIAB <b>✦</b> Gellak <b>✦</b> Acryl <b>✦</b></span>
-        <span>Manicure <b>✦</b> Pedicure <b>✦</b> Head Spa <b>✦</b> Nail Art <b>✦</b> BIAB <b>✦</b> Gellak <b>✦</b> Acryl <b>✦</b></span>
-      </div>
-    </div>
-
-    <!-- ===================== STUDIO ===================== -->
-    <section class="studio section-pad" id="studio" aria-labelledby="studio-title">
-      <div class="studio-art" aria-hidden="true">
-        <span class="orb orb-one" data-parallax="0.05"></span>
-        <span class="orb orb-two" data-parallax="-0.04"></span>
-        <span class="line-art">C</span>
-        <div class="badge">
-          <svg viewBox="0 0 200 200">
-            <defs><path id="badge-path" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"></path></defs>
-            <text><textPath href="#badge-path">Soft beauty · Calm care · Cozy Nails &amp; Spa · </textPath></text>
-          </svg>
-          <span class="badge-dot">✦</span>
-        </div>
-      </div>
-      <div class="studio-copy">
-        <p class="section-kicker reveal">Onze studio</p>
-        <h2 id="studio-title" class="reveal" style="--d:.05s">Een klein <em>verzorgingsritueel.</em></h2>
-        <p class="lede reveal" style="--d:.1s">Cozy is een gezellige thuissalon. Geen lopende band, maar rust, tijd en volle aandacht voor jouw handen en voeten.</p>
-        <ul class="pillars">
-          <li class="reveal" style="--d:.15s"><span class="pillar-num">01</span><h3>Rustig tempo</h3><p>Je krijgt de tijd die je behandeling verdient.</p></li>
-          <li class="reveal" style="--d:.2s"><span class="pillar-num">02</span><h3>Oog voor detail</h3><p>Van cuticles tot de laatste laag topgel.</p></li>
-          <li class="reveal" style="--d:.25s"><span class="pillar-num">03</span><h3>Persoonlijk advies</h3><p>Samen kijken we wat bij jouw handen past.</p></li>
-        </ul>
-      </div>
+    <section class="gallery section" id="gallery">
+      <div class="center-heading reveal"><p class="eyebrow">Galerie</p><h2>Voor jouw volgende look</h2><span class="gold-line"></span><p>Zachte kleuren, verzorgde details en een stijl die bij jou past.</p></div>
+      <div class="gallery-grid"><figure class="gallery-tile gallery-tall reveal"><img src="assets/nail-lavender.png" alt="Lavendel manicure met botanisch detail"></figure><figure class="gallery-tile reveal"><img src="assets/hero-nails.png" alt="Milky nude manicure"></figure><figure class="gallery-tile reveal"><img src="assets/hero-sculptural.png" alt="Elegante nude nagels"></figure><figure class="gallery-tile gallery-wide reveal"><img src="assets/pedicure-spa.png" alt="Spa pedicure behandeling"></figure></div>
+      <a class="instagram-link reveal" href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer">Bekijk meer op Instagram <span>↗</span></a>
     </section>
 
-    <!-- ===================== BEHANDELINGEN ===================== -->
-    <section class="services section-pad" id="behandelingen" aria-labelledby="services-title">
-      <div class="section-heading reveal">
-        <div>
-          <p class="section-kicker">Onze behandelingen</p>
-          <h2 id="services-title" data-split>Waar verwennen we je <em>mee?</em></h2>
-        </div>
-        <p class="section-note">Drie richtingen, eindeloos veel varianten. Weet je het niet zeker? We denken graag met je mee.</p>
-      </div>
+    <section class="booking section" id="booking"><div class="booking-inner reveal"><p class="eyebrow">Online boeken</p><h2>Jouw afspraak.<br><em>Snel geregeld.</em></h2><p>Bekijk straks alle beschikbare behandelingen en tijden direct via Setmore.</p><a class="booking-button booking-link" href="#booking">Open Setmore <span>↗</span></a><small>De Setmore-link wordt binnenkort toegevoegd.</small></div><div class="booking-art" aria-hidden="true"><span>C</span><i>✦</i></div></section>
 
-      <div class="service-cards">
-        <article class="scard reveal" data-tilt>
-          <div class="scard-art art-1" aria-hidden="true"><span>✦</span></div>
-          <h3>Nail Design</h3>
-          <p>Acryl, gellak en BIAB — van naturel tot volledig uitgewerkte nail art.</p>
-          <ul><li>Acryl nagelset</li><li>Gellak &amp; French</li><li>BIAB</li><li>Nail art</li></ul>
-          <span class="scard-from">v.a. €25</span>
-        </article>
+    <section class="faq section" id="faq"><div class="faq-heading reveal"><p class="eyebrow">FAQ</p><h2>Goed om te weten</h2><p>Voor je afspraak bij Cozy.</p></div><div class="faq-list reveal"><details><summary>Heb ik een afspraak nodig?<span>+</span></summary><p>Een afspraak is aanbevolen, zodat we voldoende tijd voor jouw behandeling kunnen reserveren.</p></details><details><summary>Hoe vroeg moet ik aanwezig zijn?<span>+</span></summary><p>Vijf minuten voor je afspraak is meestal voldoende.</p></details><details><summary>Kan ik een speciaal design aanvragen?<span>+</span></summary><p>Ja. Stuur je voorbeeld vooraf via Instagram of WhatsApp, dan bespreken we samen de mogelijkheden en prijs.</p></details><details><summary>Wat als ik mijn afspraak moet wijzigen?<span>+</span></summary><p>Neem zo snel mogelijk contact met ons op via telefoon of WhatsApp.</p></details></div></section>
 
-        <article class="scard reveal" style="--d:.08s" data-tilt>
-          <div class="scard-art art-2" aria-hidden="true"><span>✦</span></div>
-          <h3>Hand- &amp; voetverzorging</h3>
-          <p>Verzorgde handen en voeten, met of zonder kleur.</p>
-          <ul><li>Manicure</li><li>Spa pedicure</li><li>Gellak teennagels</li><li>Nagelreparatie</li></ul>
-          <span class="scard-from">v.a. €20</span>
-        </article>
-
-        <article class="scard reveal" style="--d:.16s" data-tilt>
-          <div class="scard-art art-3" aria-hidden="true"><span>✦</span></div>
-          <h3>Head Spa</h3>
-          <p>Even helemaal niets. Relax, refresh en restore voor je hoofdhuid.</p>
-          <ul><li>Relax</li><li>Refresh</li><li>Restore</li></ul>
-          <span class="scard-from">In overleg</span>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===================== LOOKS ===================== -->
-    <section class="looks section-pad" id="looks" aria-labelledby="looks-title">
-      <div class="section-heading reveal">
-        <div>
-          <p class="section-kicker">Ideeën voor jouw look</p>
-          <h2 id="looks-title" data-split>Kies je <em>finish.</em></h2>
-        </div>
-        <p class="section-note">Een paar richtingen om uit te kiezen. Heb je een eigen inspiratiefoto? Stuur hem gerust mee.</p>
-      </div>
-
-      <div class="look-grid">
-        <div class="look look-1 reveal"><span class="look-name">Milky nude</span><span class="look-tag">Zacht &amp; natuurlijk</span></div>
-        <div class="look look-2 reveal" style="--d:.05s"><span class="look-name">French</span><span class="look-tag">Tijdloos</span></div>
-        <div class="look look-3 reveal" style="--d:.1s"><span class="look-name">Babyboom</span><span class="look-tag">Zachte overgang</span></div>
-        <div class="look look-4 reveal" style="--d:.15s"><span class="look-name">Parelmoer</span><span class="look-tag">Subtiele glans</span></div>
-        <div class="look look-5 reveal" style="--d:.2s"><span class="look-name">Glitter</span><span class="look-tag">Feestelijk</span></div>
-        <div class="look look-6 reveal" style="--d:.25s"><span class="look-name">Nail art</span><span class="look-tag">Helemaal eigen</span></div>
-      </div>
-    </section>
-
-    <!-- ===================== IMPRESSIES ===================== -->
-    <section class="impressions" id="impressies" aria-labelledby="impressions-title">
-      <div class="impressions-head reveal">
-        <p class="section-kicker">Een paar impressies</p>
-        <h2 id="impressions-title" data-split>Sfeer bij <em>Cozy.</em></h2>
-      </div>
-      <!-- Meer foto's? Zet ze in assets/ en voeg hier extra <figure class="shot"> toe. -->
-      <div class="gallery">
-        <figure class="shot"><img src="assets/hero-nails.png" alt="Milky nude nagels op een zachte handdoek" loading="lazy" decoding="async"></figure>
-        <figure class="shot shot-art art-1" aria-hidden="true"><span>Cozy</span></figure>
-        <figure class="shot shot-art art-2" aria-hidden="true"><span>✦</span></figure>
-        <figure class="shot shot-art art-3" aria-hidden="true"><span>Calm care</span></figure>
-        <figure class="shot shot-art art-4" aria-hidden="true"><span>Soft beauty</span></figure>
-      </div>
-      <p class="gallery-note">Meer werk zie je op <a href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer">@cozynailsspa_nl</a>.</p>
-    </section>
-
-    <!-- ===================== PRIJZEN ===================== -->
-    <section class="prices section-pad" id="prijzen" aria-labelledby="prices-title">
-      <div class="section-heading prices-heading reveal">
-        <div>
-          <p class="section-kicker">Prijslijst</p>
-          <h2 id="prices-title" data-split>Kies jouw <em>treatment.</em></h2>
-        </div>
-        <p>Alle prijzen zijn in euro. Voor speciale designs stemmen we de prijs samen af.</p>
-      </div>
-
-      <div class="price-layout">
-        <nav class="price-rail" aria-label="Categorieën" data-rail>
-          <a href="#groep-acryl"><i aria-hidden="true">01</i>Acryl nagelset</a>
-          <a href="#groep-gellak"><i aria-hidden="true">02</i>Gellak</a>
-          <a href="#groep-biab"><i aria-hidden="true">03</i>BIAB</a>
-          <a href="#groep-manicure"><i aria-hidden="true">04</i>Manicure</a>
-          <a href="#groep-pedicure"><i aria-hidden="true">05</i>Pedicure</a>
-        </nav>
-
-        <div class="price-groups" data-accordion>
-          <details class="price-group reveal" id="groep-acryl" open>
-            <summary><span>Acryl nagelset</span><span class="toggle" aria-hidden="true">+</span></summary>
-            <div class="price-panel"><div class="price-items">
-              <div><span>Nieuwe set acrylnagels <small>witte tips, parelmoer tips, naturel tips</small></span><strong>€50</strong></div>
-              <div><span>Nieuwe set + Gellak</span><strong>€55</strong></div>
-              <div><span>Nieuwe set met design <small>babyboom, French manicure, glitter</small></span><strong>v.a. €55</strong></div>
-              <div><span>Nieuwe set pink nude acrylnagels</span><strong>€50</strong></div>
-              <div><span>Nieuwe set op de eigen nagels</span><strong>€45</strong></div>
-              <div><span>Opvullen acrylnagels naturel</span><strong>€40</strong></div>
-              <div><span>Opvullen acrylnagels met gellak</span><strong>€45</strong></div>
-              <div><span>Acrylnagels verwijderen</span><strong>€15</strong></div>
-              <div><span>Nail art</span><strong>€2,50 / nagel</strong></div>
-            </div></div>
-          </details>
-
-          <details class="price-group reveal" id="groep-gellak">
-            <summary><span>Gellak</span><span class="toggle" aria-hidden="true">+</span></summary>
-            <div class="price-panel"><div class="price-items">
-              <div><span>Gellak</span><strong>€25</strong></div>
-              <div><span>Gellak French</span><strong>€35</strong></div>
-              <div><span>Gellak teennagels</span><strong>€25</strong></div>
-              <div><span>Gellak verwijderen</span><strong>€10</strong></div>
-              <div><span>Speciale design nagels</span><strong>In overleg</strong></div>
-            </div></div>
-          </details>
-
-          <details class="price-group reveal" id="groep-biab">
-            <summary><span>BIAB</span><span class="toggle" aria-hidden="true">+</span></summary>
-            <div class="price-panel"><div class="price-items">
-              <div><span>Nieuwe set BIAB</span><strong>€50</strong></div>
-              <div><span>BIAB met korte verlenging</span><strong>€60</strong></div>
-              <div><span>BIAB opvullen</span><strong>€45</strong></div>
-              <div><span>Nagelreparatie</span><strong>€7</strong></div>
-            </div></div>
-          </details>
-
-          <details class="price-group reveal" id="groep-manicure">
-            <summary><span>Manicure</span><span class="toggle" aria-hidden="true">+</span></summary>
-            <div class="price-panel"><div class="price-items">
-              <div><span>Manicure</span><strong>€20</strong></div>
-              <div><span>Manicure + Gellak</span><strong>€40</strong></div>
-              <div><span>Nagelreparatie</span><strong>€5</strong></div>
-            </div></div>
-          </details>
-
-          <details class="price-group reveal" id="groep-pedicure">
-            <summary><span>Pedicure</span><span class="toggle" aria-hidden="true">+</span></summary>
-            <div class="price-panel"><div class="price-items">
-              <div><span>Spa pedicure</span><strong>€40</strong></div>
-              <div><span>Pedicure + Gellak</span><strong>€50</strong></div>
-              <div><span>Nagelreparatie</span><strong>€5</strong></div>
-            </div></div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== BOEKEN (Setmore) ===================== -->
-    <section class="booking section-pad" id="boeken" aria-labelledby="booking-title">
-      <div class="booking-head reveal">
-        <p class="section-kicker">Jouw afspraak</p>
-        <h2 id="booking-title" data-split>Boek je <em>moment.</em></h2>
-        <p>Kies hieronder wat je wilt laten doen — we nemen je selectie mee naar het boekingsscherm.</p>
-      </div>
-
-      <div class="booking-grid">
-        <div class="picker reveal" data-picker>
-          <fieldset class="pgroup">
-            <legend>Acryl nagelset</legend>
-            <label><input type="checkbox" data-name="Nieuwe set acrylnagels" data-price="50"><span>Nieuwe set acrylnagels</span><b>€50</b></label>
-            <label><input type="checkbox" data-name="Nieuwe set + gellak" data-price="55"><span>Nieuwe set + gellak</span><b>€55</b></label>
-            <label><input type="checkbox" data-name="Nieuwe set met design" data-price="55"><span>Nieuwe set met design</span><b>v.a. €55</b></label>
-            <label><input type="checkbox" data-name="Opvullen acrylnagels" data-price="40"><span>Opvullen acrylnagels</span><b>€40</b></label>
-            <label><input type="checkbox" data-name="Acrylnagels verwijderen" data-price="15"><span>Acrylnagels verwijderen</span><b>€15</b></label>
-          </fieldset>
-
-          <fieldset class="pgroup">
-            <legend>Gellak</legend>
-            <label><input type="checkbox" data-name="Gellak" data-price="25"><span>Gellak</span><b>€25</b></label>
-            <label><input type="checkbox" data-name="Gellak French" data-price="35"><span>Gellak French</span><b>€35</b></label>
-            <label><input type="checkbox" data-name="Gellak teennagels" data-price="25"><span>Gellak teennagels</span><b>€25</b></label>
-            <label><input type="checkbox" data-name="Gellak verwijderen" data-price="10"><span>Gellak verwijderen</span><b>€10</b></label>
-          </fieldset>
-
-          <fieldset class="pgroup">
-            <legend>BIAB</legend>
-            <label><input type="checkbox" data-name="Nieuwe set BIAB" data-price="50"><span>Nieuwe set BIAB</span><b>€50</b></label>
-            <label><input type="checkbox" data-name="BIAB met korte verlenging" data-price="60"><span>BIAB met korte verlenging</span><b>€60</b></label>
-            <label><input type="checkbox" data-name="BIAB opvullen" data-price="45"><span>BIAB opvullen</span><b>€45</b></label>
-          </fieldset>
-
-          <fieldset class="pgroup">
-            <legend>Hand- &amp; voetverzorging</legend>
-            <label><input type="checkbox" data-name="Manicure" data-price="20"><span>Manicure</span><b>€20</b></label>
-            <label><input type="checkbox" data-name="Manicure + gellak" data-price="40"><span>Manicure + gellak</span><b>€40</b></label>
-            <label><input type="checkbox" data-name="Spa pedicure" data-price="40"><span>Spa pedicure</span><b>€40</b></label>
-            <label><input type="checkbox" data-name="Pedicure + gellak" data-price="50"><span>Pedicure + gellak</span><b>€50</b></label>
-            <label><input type="checkbox" data-name="Nagelreparatie" data-price="5"><span>Nagelreparatie</span><b>v.a. €5</b></label>
-          </fieldset>
-
-          <fieldset class="pgroup">
-            <legend>Extra&rsquo;s</legend>
-            <label><input type="checkbox" data-name="Nail art" data-price=""><span>Nail art</span><b>€2,50 / nagel</b></label>
-            <label><input type="checkbox" data-name="Speciale design nagels" data-price=""><span>Speciale design nagels</span><b>In overleg</b></label>
-            <label><input type="checkbox" data-name="Head Spa" data-price=""><span>Head Spa</span><b>In overleg</b></label>
-          </fieldset>
-        </div>
-
-        <aside class="summary reveal" style="--d:.08s">
-          <div class="summary-inner">
-            <h3>Jouw selectie</h3>
-            <ul class="summary-list" data-summary-list>
-              <li class="summary-empty">Nog niets gekozen — vink aan wat je wilt laten doen.</li>
-            </ul>
-            <div class="summary-total">
-              <span>Indicatie totaal</span>
-              <strong data-total>€0</strong>
-            </div>
-            <p class="summary-note" data-note hidden></p>
-
-            <a class="button button-primary book-btn" data-book href="https://wa.me/31629193391" target="_blank" rel="noreferrer">
-              Verder naar boeken <span aria-hidden="true">↗</span>
-            </a>
-            <button class="button button-ghost" type="button" data-clear>Selectie wissen</button>
-            <p class="summary-fine">Prijzen zijn een indicatie. De definitieve prijs stemmen we samen af.</p>
-          </div>
-        </aside>
-      </div>
-
-      <!-- Setmore: zet je boekingslink in SETMORE_URL bovenaan script.js.
-           Zolang die leeg is, gaat de knop naar WhatsApp met de selectie erin. -->
-      <div class="setmore-embed" data-setmore-embed hidden>
-        <iframe title="Online afspraak maken bij Cozy Nails &amp; Spa" loading="lazy"></iframe>
-      </div>
-    </section>
-
-    <!-- ===================== CONTACT ===================== -->
-    <section class="contact section-pad" id="contact" aria-labelledby="contact-title">
-      <div class="bento">
-        <div class="cell cell-cta reveal" data-tilt>
-          <p class="section-kicker">Kom gezellig langs</p>
-          <h2 id="contact-title">Let&rsquo;s make it <em>cozy.</em></h2>
-          <a class="button button-light" href="#boeken">Afspraak maken <span aria-hidden="true">↗</span></a>
-        </div>
-
-        <div class="cell cell-hours reveal" style="--d:.06s" data-tilt>
-          <h3>Openingstijden</h3>
-          <dl class="hours">
-            <div data-day="1,2,3,4"><dt>Ma – Do</dt><dd>10:00 – 18:00</dd></div>
-            <div data-day="5"><dt>Vrijdag</dt><dd>10:00 – 20:00</dd></div>
-            <div data-day="6"><dt>Zaterdag</dt><dd>09:00 – 17:00</dd></div>
-            <div data-day="0"><dt>Zondag</dt><dd>Gesloten</dd></div>
-          </dl>
-        </div>
-
-        <div class="cell cell-contact reveal" style="--d:.12s" data-tilt>
-          <h3>Contact</h3>
-          <a href="tel:+31629193391">+31 629 193 391</a>
-          <a href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer">@cozynailsspa_nl</a>
-          <a href="https://cozy-nailsspa.com">cozy-nailsspa.com</a>
-          <p class="contact-note">Gezellige thuissalon — je ontvangt het adres zodra je afspraak staat.</p>
-        </div>
-
-        <a class="cell cell-qr reveal" style="--d:.18s" href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer" aria-label="Open Instagram van Cozy Nails &amp; Spa" data-tilt>
-          <img src="assets/cozy-qr.png" alt="QR-code naar de Instagram van Cozy Nails &amp; Spa" width="1440" height="1440" loading="lazy" decoding="async">
-          <span>Scan me <b aria-hidden="true">↗</b></span>
-        </a>
-      </div>
+    <section class="contact section" id="contact">
+      <div class="contact-heading reveal"><p class="eyebrow">Contact</p><h2>Zo bereik je ons</h2><p>Voor vragen, inspiratie of een afspraak staan we graag voor je klaar.</p></div>
+      <div class="contact-grid reveal"><a href="tel:+31629193391"><small>Telefoon</small><strong>+31 629 193 391</strong><span>↗</span></a><a href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer"><small>Instagram</small><strong>@cozynailsspa_nl</strong><span>↗</span></a><a href="https://cozy-nailsspa.com" target="_blank" rel="noreferrer"><small>Website</small><strong>cozy-nailsspa.com</strong><span>↗</span></a></div>
+      <div class="hours reveal"><h3>Openingstijden</h3><dl><div><dt>Maandag – donderdag</dt><dd>10:00 – 18:00</dd></div><div><dt>Vrijdag</dt><dd>10:00 – 20:00</dd></div><div><dt>Zaterdag</dt><dd>09:00 – 17:00</dd></div><div><dt>Zondag</dt><dd>Gesloten</dd></div></dl></div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <img src="assets/cozy-logo.png" alt="" width="70" height="70">
-        <p class="footer-name">Cozy <small>Nails &amp; Spa</small></p>
-        <p class="footer-tag">Zachte verzorging, rustige luxe en aandacht voor elk detail.</p>
-      </div>
-      <nav class="footer-col" aria-labelledby="foot-nav">
-        <h2 class="footer-title" id="foot-nav">Navigatie</h2>
-        <a href="#studio">Studio</a>
-        <a href="#behandelingen">Behandelingen</a>
-        <a href="#looks">Looks</a>
-        <a href="#prijzen">Prijzen</a>
-        <a href="#boeken">Boeken</a>
-      </nav>
-      <div class="footer-col">
-        <h2 class="footer-title">Contact</h2>
-        <a href="tel:+31629193391">+31 629 193 391</a>
-        <a href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer">@cozynailsspa_nl</a>
-        <a href="https://cozy-nailsspa.com">cozy-nailsspa.com</a>
-      </div>
-      <div class="footer-col footer-cta">
-        <h2 class="footer-title">Afspraak maken</h2>
-        <p class="footer-tag">Kies je behandelingen en boek online, of stuur ons een berichtje.</p>
-        <a class="button button-light" href="#boeken">Boek nu <span aria-hidden="true">↗</span></a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>Copyright © <span data-year></span> Hoangcaster</span>
-      <a class="to-top" href="#top">Terug naar boven <span aria-hidden="true">↑</span></a>
-    </div>
-  </footer>
-
-  <a class="fab" href="#boeken" aria-label="Afspraak maken">
-    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
-      <rect x="3" y="4.5" width="18" height="16" rx="3"></rect><path d="M8 2.8v3.4M16 2.8v3.4M3 9.5h18"></path>
-    </svg>
-    <span>Boek nu</span>
-  </a>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NailSalon",
-    "name": "Cozy Nails & Spa",
-    "url": "https://cozy-nailsspa.com/",
-    "image": "https://cozy-nailsspa.com/assets/og-image.png",
-    "logo": "https://cozy-nailsspa.com/assets/icon-512.png",
-    "description": "Thuissalon voor manicure, pedicure, gellak, acryl, BIAB, nail art en head spa in een rustige, elegante sfeer.",
-    "address": { "@type": "PostalAddress", "addressCountry": "NL" },
-    "telephone": "+31629193391",
-    "priceRange": "€€",
-    "currenciesAccepted": "EUR",
-    "sameAs": ["https://instagram.com/cozynailsspa_nl"],
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "10:00", "closes": "18:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "20:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
-    ]
-  }
-  </script>
+  <footer><div class="footer-brand"><img src="assets/cozy-logo.png" alt="Cozy Nails & Spa" width="104" height="90"><p>Beauty & rust<br><span>Een moment voor jezelf.</span></p></div><div><h3>Navigatie</h3><a href="#over-ons">Over ons</a><a href="#services">Behandelingen</a><a href="#gallery">Galerie</a><a href="#booking">Boeken</a></div><div><h3>Contact</h3><a href="tel:+31629193391">+31 629 193 391</a><a href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer">Instagram</a><a href="https://cozy-nailsspa.com" target="_blank" rel="noreferrer">Website</a></div><div><h3>Openingstijden</h3><p>Ma – Do: 10:00 – 18:00<br>Vr: 10:00 – 20:00<br>Za: 09:00 – 17:00<br>Zo: Gesloten</p></div><p class="copyright">© 2026 Hoangcaster</p></footer>
+  <div class="booking-toast" role="status" aria-live="polite">Setmore booking wordt binnenkort toegevoegd.</div>
   <script src="script.js"></script>
 </body>
 </html>
