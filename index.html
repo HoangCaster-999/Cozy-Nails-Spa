@@ -53,7 +53,7 @@
         <a href="#prijzen" data-spy><i aria-hidden="true">03</i>Prijzen</a>
         <a href="#contact" data-spy><i aria-hidden="true">04</i>Contact</a>
       </div>
-      <a class="nav-cta" href="https://wa.me/31629193391" target="_blank" rel="noreferrer">Boek nu</a>
+      <a class="nav-cta" href="https://wa.me/31629193391" target="_blank" rel="noreferrer" data-magnetic>Boek nu</a>
       <div class="nav-foot">
         <a href="tel:+31629193391">+31 629 193 391</a>
         <a href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer">@cozynailsspa_nl</a>
@@ -62,232 +62,305 @@
   </header>
 
   <main id="main">
+    <!-- ============ HERO: inset frame, type breaking out over the edge ============ -->
     <section class="hero" id="top">
-      <div class="hero-media">
-        <img class="hero-image" src="assets/hero-nails.png" alt="Verzorgde milky nude nagels in een rustige spa-sfeer" data-parallax="0.08">
-      </div>
-      <div class="hero-wash"></div>
-      <div class="sparkles" aria-hidden="true">
-        <span style="--x:14%; --y:22%; --s:1;   --t:0s"></span>
-        <span style="--x:31%; --y:68%; --s:.6;  --t:1.4s"></span>
-        <span style="--x:63%; --y:17%; --s:.8;  --t:2.6s"></span>
-        <span style="--x:77%; --y:54%; --s:1.2; --t:.7s"></span>
-        <span style="--x:88%; --y:31%; --s:.5;  --t:3.3s"></span>
-        <span style="--x:52%; --y:83%; --s:.7;  --t:2s"></span>
-      </div>
-      <div class="hero-content">
-        <p class="eyebrow reveal">Manicure · Pedicure · Head Spa</p>
-        <h1 class="reveal" style="--d:.08s">Een moment<br><em>voor jezelf.</em></h1>
-        <p class="hero-copy reveal" style="--d:.16s">Zachte verzorging, rustige luxe en aandacht voor elk detail.</p>
-        <div class="hero-actions reveal" style="--d:.24s">
-          <a class="button button-primary" href="https://wa.me/31629193391" target="_blank" rel="noreferrer">Maak een afspraak <span>↗</span></a>
-          <a class="text-link" href="#prijzen">Bekijk prijslijst <span>↓</span></a>
+      <div class="hero-frame">
+        <div class="hero-media">
+          <img class="hero-image" src="assets/hero-nails.png" alt="Verzorgde milky nude nagels in een rustige spa-sfeer" data-parallax="0.07">
+        </div>
+        <div class="hero-wash"></div>
+        <div class="sparkles" aria-hidden="true">
+          <span style="--x:16%; --y:24%; --s:1;   --t:0s"></span>
+          <span style="--x:34%; --y:70%; --s:.6;  --t:1.4s"></span>
+          <span style="--x:64%; --y:18%; --s:.8;  --t:2.6s"></span>
+          <span style="--x:78%; --y:56%; --s:1.2; --t:.7s"></span>
+          <span style="--x:88%; --y:33%; --s:.5;  --t:3.3s"></span>
+          <span style="--x:54%; --y:84%; --s:.7;  --t:2s"></span>
+        </div>
+
+        <p class="hero-side" aria-hidden="true">Cozy care, beautiful details</p>
+
+        <div class="hero-inner">
+          <p class="eyebrow reveal">Manicure · Pedicure · Head Spa</p>
+
+          <div class="hero-main">
+            <h1 data-split>Een moment<br><em>voor jezelf.</em></h1>
+            <div class="hero-lower">
+              <p class="hero-copy reveal" style="--d:.1s">Zachte verzorging, rustige luxe en aandacht voor elk detail.</p>
+              <div class="hero-actions reveal" style="--d:.18s">
+                <a class="button button-primary" href="https://wa.me/31629193391" target="_blank" rel="noreferrer" data-magnetic>Maak een afspraak <span>↗</span></a>
+                <a class="text-link" href="#prijzen">Bekijk prijslijst <span>↓</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-rail">
+            <span class="chip" data-status hidden></span>
+            <span class="chip chip-quiet">Thuissalon · Nederland</span>
+            <a class="chip chip-link" href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer">@cozynailsspa_nl <b aria-hidden="true">↗</b></a>
+          </div>
         </div>
       </div>
-      <p class="hero-note">Cozy care, beautiful details</p>
+
       <a class="scroll-cue" href="#intro-title" aria-label="Scroll naar beneden">
         <span class="scroll-cue-line" aria-hidden="true"></span>
-        <span class="scroll-cue-text">Scroll</span>
+        <span>Scroll</span>
       </a>
     </section>
 
-    <section class="intro section-pad" aria-labelledby="intro-title">
-      <p class="section-kicker reveal">Welkom bij Cozy</p>
-      <h2 id="intro-title" class="reveal" style="--d:.06s">Meer dan mooie nagels.<br><em>Een klein verzorgingsritueel.</em></h2>
-      <p class="intro-copy reveal" style="--d:.12s">Van een verzorgde manicure tot een ontspannen head spa: bij Cozy draait alles om rust, kwaliteit en een resultaat dat bij jou past.</p>
+    <!-- ============ INTRO: sticky heading, copy scrolls past it ============ -->
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="intro-sticky">
+        <p class="section-kicker reveal">Welkom bij Cozy</p>
+        <h2 id="intro-title" data-split>Meer dan mooie nagels.</h2>
+      </div>
+      <div class="intro-body">
+        <p class="lede reveal">Van een verzorgde manicure tot een ontspannen head spa: bij Cozy draait alles om rust, kwaliteit en een resultaat dat bij jou past.</p>
+        <ul class="pillars">
+          <li class="reveal">
+            <span class="pillar-num">01</span>
+            <h3>Rustig tempo</h3>
+            <p>Geen haast en geen lopende band. Je krijgt de tijd die je behandeling verdient.</p>
+          </li>
+          <li class="reveal" style="--d:.08s">
+            <span class="pillar-num">02</span>
+            <h3>Oog voor detail</h3>
+            <p>Van cuticles tot de laatste laag topgel — het zit hem in de afwerking.</p>
+          </li>
+          <li class="reveal" style="--d:.16s">
+            <span class="pillar-num">03</span>
+            <h3>Persoonlijk advies</h3>
+            <p>Samen kijken we welke vorm, lengte en kleur bij jouw handen passen.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <div class="marquee" aria-hidden="true">
+    <div class="marquee" aria-hidden="true" data-marquee>
       <div class="marquee-track">
         <span>Manicure <b>✦</b> Pedicure <b>✦</b> Head Spa <b>✦</b> Nail Art <b>✦</b> BIAB <b>✦</b> Gellak <b>✦</b> Acryl <b>✦</b></span>
         <span>Manicure <b>✦</b> Pedicure <b>✦</b> Head Spa <b>✦</b> Nail Art <b>✦</b> BIAB <b>✦</b> Gellak <b>✦</b> Acryl <b>✦</b></span>
       </div>
     </div>
 
-    <section class="services section-pad" id="behandelingen" aria-labelledby="services-title">
+    <!-- ============ SERVICES: editorial index + cursor-following preview ============ -->
+    <section class="services section-pad" id="behandelingen" aria-labelledby="services-title" data-index>
       <div class="section-heading reveal">
         <div>
           <p class="section-kicker">Onze behandelingen</p>
-          <h2 id="services-title">Vind jouw <em>moment.</em></h2>
+          <h2 id="services-title" data-split>Vind jouw <em>moment.</em></h2>
         </div>
         <p class="section-note">Elke behandeling begint met een rustig moment en eindigt met een resultaat waar je blij van wordt.</p>
       </div>
+
       <div class="service-list">
-        <article class="service-row reveal">
+        <article class="service-row reveal" data-tint="1">
           <span class="service-number">01</span>
           <h3>Nails</h3>
           <p>Acryl · Gellak · BIAB · Nail art</p>
+          <span class="service-from">v.a. €25</span>
           <span class="service-mark" aria-hidden="true">✦</span>
         </article>
-        <article class="service-row reveal" style="--d:.07s">
+        <article class="service-row reveal" style="--d:.06s" data-tint="2">
           <span class="service-number">02</span>
           <h3>Manicure</h3>
           <p>Vijlen · Verzorging · Lakken</p>
+          <span class="service-from">v.a. €20</span>
           <span class="service-mark" aria-hidden="true">✦</span>
         </article>
-        <article class="service-row reveal" style="--d:.14s">
+        <article class="service-row reveal" style="--d:.12s" data-tint="3">
           <span class="service-number">03</span>
           <h3>Pedicure</h3>
           <p>Spa care · Gellak · Verzorging</p>
+          <span class="service-from">v.a. €40</span>
           <span class="service-mark" aria-hidden="true">✦</span>
         </article>
-        <article class="service-row reveal" style="--d:.21s">
+        <article class="service-row reveal" style="--d:.18s" data-tint="4">
           <span class="service-number">04</span>
           <h3>Head Spa</h3>
           <p>Relax · Refresh · Restore</p>
+          <span class="service-from">In overleg</span>
           <span class="service-mark" aria-hidden="true">✦</span>
         </article>
       </div>
+
+      <div class="index-preview" data-preview aria-hidden="true"><span></span></div>
     </section>
 
+    <!-- ============ RITUAL: art panel + rotating badge ============ -->
     <section class="ritual" aria-label="Cozy sfeer">
       <div class="ritual-art" aria-hidden="true">
-        <span class="orb orb-one" data-parallax="0.06"></span>
-        <span class="orb orb-two" data-parallax="-0.05"></span>
+        <span class="orb orb-one" data-parallax="0.05"></span>
+        <span class="orb orb-two" data-parallax="-0.04"></span>
         <span class="spark">✦</span>
         <span class="spark spark-sm">✦</span>
         <span class="line-art">C</span>
+        <div class="badge">
+          <svg viewBox="0 0 200 200">
+            <defs><path id="badge-path" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"></path></defs>
+            <text><textPath href="#badge-path">Soft beauty · Calm care · Cozy Nails &amp; Spa · </textPath></text>
+          </svg>
+          <span class="badge-dot">✦</span>
+        </div>
       </div>
       <div class="ritual-copy reveal">
         <p class="section-kicker">Rust in elk detail</p>
-        <h2>Soft beauty.<br><em>Calm care.</em></h2>
+        <h2 data-split>Soft beauty. <em>Calm care.</em></h2>
         <p>Een warme, elegante sfeer waar je even vertraagt en met een verzorgd gevoel weer naar buiten gaat.</p>
         <a class="text-link" href="#contact">Plan jouw bezoek <span>→</span></a>
       </div>
     </section>
 
+    <!-- ============ WERKWIJZE: timeline with a line that fills on scroll ============ -->
     <section class="steps section-pad" id="werkwijze" aria-labelledby="steps-title">
       <div class="section-heading reveal">
         <div>
           <p class="section-kicker">Zo werkt het</p>
-          <h2 id="steps-title">In drie <em>stappen.</em></h2>
+          <h2 id="steps-title" data-split>In drie <em>stappen.</em></h2>
         </div>
       </div>
-      <ol class="step-list">
-        <li class="step reveal">
-          <span class="step-num">01</span>
+      <ol class="timeline" data-timeline>
+        <li class="reveal">
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="tl-num">01</span>
           <h3>Kies je behandeling</h3>
           <p>Bekijk de prijslijst en kies wat bij je past. Twijfel je? We denken graag met je mee.</p>
         </li>
-        <li class="step reveal" style="--d:.09s">
-          <span class="step-num">02</span>
+        <li class="reveal" style="--d:.08s">
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="tl-num">02</span>
           <h3>Boek je moment</h3>
           <p>Stuur een berichtje via WhatsApp of Instagram en we plannen een tijd die jou uitkomt.</p>
         </li>
-        <li class="step reveal" style="--d:.18s">
-          <span class="step-num">03</span>
+        <li class="reveal" style="--d:.16s">
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="tl-num">03</span>
           <h3>Ontspan bij Cozy</h3>
           <p>Kom langs, leun achterover en laat de rest aan ons over.</p>
         </li>
+        <span class="tl-rail" aria-hidden="true"><i data-timeline-fill></i></span>
       </ol>
     </section>
 
+    <!-- ============ PRICES: sticky category rail (desktop) / accordion (mobile) ============ -->
     <section class="prices section-pad" id="prijzen" aria-labelledby="prices-title">
       <div class="section-heading prices-heading reveal">
         <div>
           <p class="section-kicker">Prijslijst</p>
-          <h2 id="prices-title">Kies jouw <em>treatment.</em></h2>
+          <h2 id="prices-title" data-split>Kies jouw <em>treatment.</em></h2>
         </div>
         <p>Alle prijzen zijn in euro. Voor speciale designs stemmen we de prijs samen af.</p>
       </div>
 
-      <div class="price-groups" data-accordion>
-        <details class="price-group reveal" open>
-          <summary><span>Acryl nagelset</span><span class="toggle" aria-hidden="true">+</span></summary>
-          <div class="price-panel">
-            <div class="price-items">
-              <div><span>Nieuwe set acrylnagels <small>witte tips, parelmoer tips, naturel tips</small></span><strong>€50</strong></div>
-              <div><span>Nieuwe set + Gellak</span><strong>€55</strong></div>
-              <div><span>Nieuwe set met design <small>babyboom, French manicure, glitter</small></span><strong>v.a. €55</strong></div>
-              <div><span>Nieuwe set pink nude acrylnagels</span><strong>€50</strong></div>
-              <div><span>Nieuwe set op de eigen nagels</span><strong>€45</strong></div>
-              <div><span>Opvullen acrylnagels naturel</span><strong>€40</strong></div>
-              <div><span>Opvullen acrylnagels met gellak</span><strong>€45</strong></div>
-              <div><span>Acrylnagels verwijderen</span><strong>€15</strong></div>
-              <div><span>Nail art</span><strong>€2,50 / nagel</strong></div>
-            </div>
-          </div>
-        </details>
+      <div class="price-layout">
+        <nav class="price-rail" aria-label="Categorieën" data-rail>
+          <a href="#groep-acryl"><i aria-hidden="true">01</i>Acryl nagelset</a>
+          <a href="#groep-gellak"><i aria-hidden="true">02</i>Gellak</a>
+          <a href="#groep-biab"><i aria-hidden="true">03</i>BIAB</a>
+          <a href="#groep-manicure"><i aria-hidden="true">04</i>Manicure</a>
+          <a href="#groep-pedicure"><i aria-hidden="true">05</i>Pedicure</a>
+        </nav>
 
-        <details class="price-group reveal">
-          <summary><span>Gellak</span><span class="toggle" aria-hidden="true">+</span></summary>
-          <div class="price-panel">
-            <div class="price-items">
-              <div><span>Gellak</span><strong>€25</strong></div>
-              <div><span>Gellak French</span><strong>€35</strong></div>
-              <div><span>Gellak teennagels</span><strong>€25</strong></div>
-              <div><span>Gellak verwijderen</span><strong>€10</strong></div>
-              <div><span>Speciale design nagels</span><strong>In overleg</strong></div>
+        <div class="price-groups" data-accordion>
+          <details class="price-group reveal" id="groep-acryl" open>
+            <summary><span>Acryl nagelset</span><span class="toggle" aria-hidden="true">+</span></summary>
+            <div class="price-panel">
+              <div class="price-items">
+                <div><span>Nieuwe set acrylnagels <small>witte tips, parelmoer tips, naturel tips</small></span><strong>€50</strong></div>
+                <div><span>Nieuwe set + Gellak</span><strong>€55</strong></div>
+                <div><span>Nieuwe set met design <small>babyboom, French manicure, glitter</small></span><strong>v.a. €55</strong></div>
+                <div><span>Nieuwe set pink nude acrylnagels</span><strong>€50</strong></div>
+                <div><span>Nieuwe set op de eigen nagels</span><strong>€45</strong></div>
+                <div><span>Opvullen acrylnagels naturel</span><strong>€40</strong></div>
+                <div><span>Opvullen acrylnagels met gellak</span><strong>€45</strong></div>
+                <div><span>Acrylnagels verwijderen</span><strong>€15</strong></div>
+                <div><span>Nail art</span><strong>€2,50 / nagel</strong></div>
+              </div>
             </div>
-          </div>
-        </details>
+          </details>
 
-        <details class="price-group reveal">
-          <summary><span>BIAB</span><span class="toggle" aria-hidden="true">+</span></summary>
-          <div class="price-panel">
-            <div class="price-items">
-              <div><span>Nieuwe set BIAB</span><strong>€50</strong></div>
-              <div><span>BIAB met korte verlenging</span><strong>€60</strong></div>
-              <div><span>BIAB opvullen</span><strong>€45</strong></div>
-              <div><span>Nagelreparatie</span><strong>€7</strong></div>
+          <details class="price-group reveal" id="groep-gellak">
+            <summary><span>Gellak</span><span class="toggle" aria-hidden="true">+</span></summary>
+            <div class="price-panel">
+              <div class="price-items">
+                <div><span>Gellak</span><strong>€25</strong></div>
+                <div><span>Gellak French</span><strong>€35</strong></div>
+                <div><span>Gellak teennagels</span><strong>€25</strong></div>
+                <div><span>Gellak verwijderen</span><strong>€10</strong></div>
+                <div><span>Speciale design nagels</span><strong>In overleg</strong></div>
+              </div>
             </div>
-          </div>
-        </details>
+          </details>
 
-        <details class="price-group reveal">
-          <summary><span>Manicure</span><span class="toggle" aria-hidden="true">+</span></summary>
-          <div class="price-panel">
-            <div class="price-items">
-              <div><span>Manicure</span><strong>€20</strong></div>
-              <div><span>Manicure + Gellak</span><strong>€40</strong></div>
-              <div><span>Nagelreparatie</span><strong>€5</strong></div>
+          <details class="price-group reveal" id="groep-biab">
+            <summary><span>BIAB</span><span class="toggle" aria-hidden="true">+</span></summary>
+            <div class="price-panel">
+              <div class="price-items">
+                <div><span>Nieuwe set BIAB</span><strong>€50</strong></div>
+                <div><span>BIAB met korte verlenging</span><strong>€60</strong></div>
+                <div><span>BIAB opvullen</span><strong>€45</strong></div>
+                <div><span>Nagelreparatie</span><strong>€7</strong></div>
+              </div>
             </div>
-          </div>
-        </details>
+          </details>
 
-        <details class="price-group reveal">
-          <summary><span>Pedicure</span><span class="toggle" aria-hidden="true">+</span></summary>
-          <div class="price-panel">
-            <div class="price-items">
-              <div><span>Spa pedicure</span><strong>€40</strong></div>
-              <div><span>Pedicure + Gellak</span><strong>€50</strong></div>
-              <div><span>Nagelreparatie</span><strong>€5</strong></div>
+          <details class="price-group reveal" id="groep-manicure">
+            <summary><span>Manicure</span><span class="toggle" aria-hidden="true">+</span></summary>
+            <div class="price-panel">
+              <div class="price-items">
+                <div><span>Manicure</span><strong>€20</strong></div>
+                <div><span>Manicure + Gellak</span><strong>€40</strong></div>
+                <div><span>Nagelreparatie</span><strong>€5</strong></div>
+              </div>
             </div>
-          </div>
-        </details>
+          </details>
+
+          <details class="price-group reveal" id="groep-pedicure">
+            <summary><span>Pedicure</span><span class="toggle" aria-hidden="true">+</span></summary>
+            <div class="price-panel">
+              <div class="price-items">
+                <div><span>Spa pedicure</span><strong>€40</strong></div>
+                <div><span>Pedicure + Gellak</span><strong>€50</strong></div>
+                <div><span>Nagelreparatie</span><strong>€5</strong></div>
+              </div>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
 
+    <!-- ============ CONTACT: bento grid ============ -->
     <section class="contact section-pad" id="contact" aria-labelledby="contact-title">
-      <div class="contact-title reveal">
-        <p class="section-kicker">Kom gezellig langs</p>
-        <h2 id="contact-title">Let’s make it <em>cozy.</em></h2>
-        <a class="button button-light" href="https://wa.me/31629193391" target="_blank" rel="noreferrer">Boek via WhatsApp <span>↗</span></a>
-      </div>
+      <div class="bento">
+        <div class="cell cell-cta reveal" data-tilt>
+          <p class="section-kicker">Kom gezellig langs</p>
+          <h2 id="contact-title" data-split>Let’s make it <em>cozy.</em></h2>
+          <a class="button button-light" href="https://wa.me/31629193391" target="_blank" rel="noreferrer" data-magnetic>Boek via WhatsApp <span>↗</span></a>
+        </div>
 
-      <div class="contact-details reveal" style="--d:.08s">
-        <div>
+        <div class="cell cell-hours reveal" style="--d:.06s" data-tilt>
           <h3>Openingstijden</h3>
           <dl class="hours">
-            <div><dt>Ma – Do</dt><dd>10:00 – 18:00</dd></div>
-            <div><dt>Vrijdag</dt><dd>10:00 – 20:00</dd></div>
-            <div><dt>Zaterdag</dt><dd>09:00 – 17:00</dd></div>
-            <div><dt>Zondag</dt><dd>Gesloten</dd></div>
+            <div data-day="1,2,3,4"><dt>Ma – Do</dt><dd>10:00 – 18:00</dd></div>
+            <div data-day="5"><dt>Vrijdag</dt><dd>10:00 – 20:00</dd></div>
+            <div data-day="6"><dt>Zaterdag</dt><dd>09:00 – 17:00</dd></div>
+            <div data-day="0"><dt>Zondag</dt><dd>Gesloten</dd></div>
           </dl>
         </div>
-        <div>
+
+        <div class="cell cell-contact reveal" style="--d:.12s" data-tilt>
           <h3>Contact</h3>
           <a href="tel:+31629193391">+31 629 193 391</a>
           <a href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer">@cozynailsspa_nl</a>
-          <a href="https://cozy-nailsspa.com" target="_blank" rel="noreferrer">cozy-nailsspa.com</a>
+          <a href="https://cozy-nailsspa.com">cozy-nailsspa.com</a>
           <p class="contact-note">Gezellige thuissalon — je ontvangt het adres zodra je afspraak staat.</p>
         </div>
-      </div>
 
-      <a class="qr reveal" style="--d:.16s" href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer" aria-label="Open Instagram van Cozy Nails &amp; Spa">
-        <img src="assets/cozy-qr.png" alt="QR-code naar de Instagram van Cozy Nails &amp; Spa" width="1440" height="1440" loading="lazy" decoding="async">
-        <span>Scan me <b>↗</b></span>
-      </a>
+        <a class="cell cell-qr reveal" style="--d:.18s" href="https://instagram.com/cozynailsspa_nl" target="_blank" rel="noreferrer" aria-label="Open Instagram van Cozy Nails &amp; Spa" data-tilt>
+          <img src="assets/cozy-qr.png" alt="QR-code naar de Instagram van Cozy Nails &amp; Spa" width="1440" height="1440" loading="lazy" decoding="async">
+          <span>Scan me <b aria-hidden="true">↗</b></span>
+        </a>
+      </div>
     </section>
   </main>
 
