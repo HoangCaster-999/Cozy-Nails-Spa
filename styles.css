@@ -197,14 +197,6 @@ h1 em, h2 em { font-weight: 400; background: linear-gradient(100deg, var(--laven
 .service-mark { font-size: 1.5rem; color: var(--lavender-deep); transition: transform .45s var(--ease); }
 .service-row:hover .service-mark { transform: rotate(135deg) scale(1.2); }
 
-.index-preview { position: fixed; z-index: 40; top: 0; left: 0; width: 190px; height: 130px; border-radius: 18px; pointer-events: none; opacity: 0; transform: translate(-50%, -50%) scale(.85); transition: opacity .3s, transform .4s var(--ease); display: grid; place-items: center; overflow: hidden; box-shadow: 0 20px 50px rgba(64,34,49,.2); }
-.index-preview.on { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-.index-preview span { font: 400 1.5rem var(--serif); color: var(--wine); letter-spacing: .02em; }
-.index-preview[data-tint="1"] { background: linear-gradient(135deg, #c7addb, #eee5f1); }
-.index-preview[data-tint="2"] { background: linear-gradient(135deg, #e3b9c4, #f6e7ea); }
-.index-preview[data-tint="3"] { background: linear-gradient(135deg, #b9c9dd, #eaf0f5); }
-.index-preview[data-tint="4"] { background: linear-gradient(135deg, #d9c3a8, #f5ece0); }
-
 /* ---------- ritual + rotating badge ---------- */
 .ritual { min-height: 680px; display: grid; grid-template-columns: 1.05fr .95fr; overflow: hidden; background: #dccde8; }
 .ritual-art { position: relative; min-height: 560px; background: radial-gradient(circle at 36% 42%, #fff8f2 0 4%, transparent 4.2%), radial-gradient(circle at 38% 40%, rgba(255,255,255,.6) 0 24%, transparent 24.3%), linear-gradient(135deg, #c7addb, #eee5f1); }
@@ -374,7 +366,6 @@ h1 em, h2 em { font-weight: 400; background: linear-gradient(100deg, var(--laven
   .menu-button.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
   .hero-image { object-position: 57% center; }
-  .index-preview { display: none; }
   .intro { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
   .intro-sticky { position: static; }
   .section-heading { display: block; }

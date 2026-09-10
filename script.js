@@ -184,39 +184,6 @@ if (marqueeTrack && !reduced.matches) {
   requestAnimationFrame(step);
 }
 
-/* ---------- services: preview swatch that follows the cursor ---------- */
-const preview = document.querySelector('[data-preview]');
-if (preview && fine.matches && !reduced.matches) {
-  const label = preview.querySelector('span');
-  let px = 0, py = 0, tx = 0, ty = 0, running = false;
-
-  const glide = () => {
-    px += (tx - px) * 0.16;
-    py += (ty - py) * 0.16;
-    preview.style.left = `${px.toFixed(1)}px`;
-    preview.style.top = `${py.toFixed(1)}px`;
-    if (running || Math.abs(tx - px) > 0.5 || Math.abs(ty - py) > 0.5) requestAnimationFrame(glide);
-  };
-
-  document.querySelectorAll('.service-row').forEach(row => {
-    row.addEventListener('pointerenter', () => {
-      preview.dataset.tint = row.dataset.tint || '1';
-      label.textContent = row.querySelector('h3').textContent;
-      preview.classList.add('on');
-      if (!running) { running = true; requestAnimationFrame(glide); }
-    });
-    row.addEventListener('pointerleave', () => {
-      preview.classList.remove('on');
-      running = false;
-    });
-  });
-
-  document.querySelector('[data-index]')?.addEventListener('pointermove', event => {
-    tx = event.clientX;
-    ty = event.clientY;
-  });
-}
-
 /* ---------- magnetic buttons ---------- */
 if (fine.matches && !reduced.matches) {
   document.querySelectorAll('[data-magnetic]').forEach(el => {
