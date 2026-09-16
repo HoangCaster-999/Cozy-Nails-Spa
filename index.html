@@ -17,6 +17,31 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Ga naar inhoud</a>
+  <div class="welcome-popup" data-welcome-popup role="dialog" aria-modal="true" aria-label="Grand opening: 20% korting op alle behandelingen">
+    <button class="welcome-popup__backdrop" type="button" data-popup-close tabindex="-1" aria-label="Sluiten"></button>
+    <section class="welcome-popup__card" tabindex="-1">
+      <button class="welcome-popup__close" type="button" data-popup-close aria-label="Popup sluiten">
+        <span aria-hidden="true"></span>
+      </button>
+      <img class="welcome-popup__banner" src="assets/popup-grand-opening-original-style.png" alt="Cozy Nails & Spa grand opening: 20% korting op alle behandelingen van 24 oktober tot en met 28 november">
+      <img class="welcome-popup__qr" src="assets/cozy-qr.png" alt="Scan de QR-code voor meer informatie en om een afspraak te maken">
+      <div class="welcome-popup__mobile">
+        <div class="welcome-popup__mobile-photo" aria-hidden="true"></div>
+        <div class="welcome-popup__mobile-copy">
+          <p class="welcome-popup__mobile-brand">Cozy <span>nails & spa</span></p>
+          <p class="welcome-popup__mobile-eyebrow">Grand opening</p>
+          <p class="welcome-popup__mobile-offer"><strong>20%</strong><span>korting <small>op alle behandelingen</small></span></p>
+          <p class="welcome-popup__mobile-date"><span>24 oct</span><i></i><span>28 nov</span></p>
+          <p class="welcome-popup__mobile-services">Manicure · Pedicure · Head spa</p>
+          <div class="welcome-popup__mobile-actions">
+            <a href="tel:+31629193391">Maak een afspraak <span aria-hidden="true">→</span></a>
+            <img src="assets/cozy-qr.png" alt="Scan de QR-code om een afspraak te maken">
+          </div>
+        </div>
+      </div>
+      <span class="welcome-popup__timer" aria-hidden="true"></span>
+    </section>
+  </div>
   <header class="header" data-header>
     <a class="brand" href="#top" aria-label="Cozy Nails & Spa — home"><img src="assets/cozy-logo.png" alt="" width="48" height="48"><span>Cozy Nails & Spa</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span><b class="sr-only">Menu</b></button>

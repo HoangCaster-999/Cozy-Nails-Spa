@@ -19,6 +19,218 @@
 .booking { background: #7b542c; }
 footer { background: #342a21; }
 
+/* Grand-opening popup */
+.welcome-popup {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 4vw, 3rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s ease, visibility .35s;
+}
+
+.welcome-popup.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.welcome-popup__backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  border: 0;
+  background: rgba(36, 27, 22, .68);
+  backdrop-filter: blur(8px);
+  cursor: default;
+}
+
+.welcome-popup__card {
+  position: relative;
+  width: min(1200px, 94vw);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: clamp(.8rem, 1.6vw, 1.5rem);
+  outline: 0;
+  background: #fff8f4;
+  box-shadow: 0 30px 90px rgba(55, 35, 24, .28);
+  transform: translateY(24px) scale(.97);
+  transition: transform .55s cubic-bezier(.22, 1, .36, 1);
+}
+
+.welcome-popup.is-open .welcome-popup__card { transform: none; }
+
+.welcome-popup__banner { width: 100%; height: auto; }
+.welcome-popup__mobile { display: none; }
+.welcome-popup__qr {
+  position: absolute;
+  z-index: 1;
+  top: 54.6%;
+  left: 84.6%;
+  width: 10.9%;
+  aspect-ratio: 1;
+  padding: .45%;
+  border-radius: 7%;
+  background: #fff;
+  object-fit: contain;
+}
+
+.welcome-popup__close {
+  position: absolute;
+  z-index: 2;
+  top: 1rem;
+  right: 1rem;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(87, 51, 34, .16);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .84);
+  cursor: pointer;
+  transition: transform .25s, background .25s;
+}
+
+.welcome-popup__close:hover { transform: rotate(90deg); background: #fff; }
+.welcome-popup__close span::before,
+.welcome-popup__close span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 1px;
+  background: #573322;
+}
+.welcome-popup__close span::before { transform: translate(-50%, -50%) rotate(45deg); }
+.welcome-popup__close span::after { transform: translate(-50%, -50%) rotate(-45deg); }
+
+.welcome-popup__timer {
+  position: absolute;
+  z-index: 3;
+  inset: auto 0 0;
+  height: 4px;
+  background: #b96f5c;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.welcome-popup.is-open .welcome-popup__timer { animation: popup-timer 5s linear forwards; }
+@keyframes popup-timer { to { transform: scaleX(1); } }
+
+@media (max-width: 760px) {
+  .welcome-popup { padding: .75rem; }
+  .welcome-popup__card {
+    width: min(380px, 96vw);
+    max-height: 94svh;
+    overflow-y: auto;
+    border-radius: 1.4rem;
+  }
+  .welcome-popup__banner,
+  .welcome-popup__qr { display: none; }
+  .welcome-popup__mobile { display: block; background: #fff6f2; }
+  .welcome-popup__mobile-photo {
+    height: clamp(135px, 24svh, 185px);
+    background: url("assets/popup-grand-opening-original-style.png") left center / 320% auto no-repeat;
+  }
+  .welcome-popup__mobile-copy {
+    padding: 1.25rem 1.35rem 1.5rem;
+    color: #5b3022;
+    text-align: center;
+    background: radial-gradient(circle at 100% 0, rgba(232, 170, 159, .22), transparent 38%), #fff6f2;
+  }
+  .welcome-popup__mobile-brand {
+    margin: 0;
+    font: 400 clamp(2.4rem, 13vw, 3.2rem)/.8 var(--serif);
+    letter-spacing: -.04em;
+  }
+  .welcome-popup__mobile-brand span {
+    display: block;
+    margin-top: .7rem;
+    font: 600 .58rem/1 var(--sans);
+    letter-spacing: .3em;
+    text-transform: uppercase;
+  }
+  .welcome-popup__mobile-eyebrow {
+    margin: 1.15rem 0 .35rem;
+    color: #ae5d4c;
+    font-size: .62rem;
+    font-weight: 600;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+  }
+  .welcome-popup__mobile-offer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    margin: 0 0 .85rem;
+    text-align: left;
+  }
+  .welcome-popup__mobile-offer strong {
+    color: #a84f3d;
+    font: 600 clamp(4.1rem, 21vw, 5rem)/.8 var(--sans);
+    letter-spacing: -.09em;
+  }
+  .welcome-popup__mobile-offer > span {
+    font: 400 2rem/1 var(--serif);
+    text-transform: lowercase;
+  }
+  .welcome-popup__mobile-offer small {
+    display: block;
+    margin-top: .4rem;
+    font: 600 .53rem/1.25 var(--sans);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  .welcome-popup__mobile-date {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin: 0;
+    padding: .62rem 1rem;
+    border-radius: 99px;
+    background: #89572d;
+    color: #fff;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+  .welcome-popup__mobile-date span { flex: 1; }
+  .welcome-popup__mobile-date i { width: 20px; height: 1px; background: rgba(255, 255, 255, .55); }
+  .welcome-popup__mobile-services {
+    margin: .9rem 0 1rem;
+    color: #9b695c;
+    font-size: .56rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .welcome-popup__mobile-actions { display: flex; align-items: center; justify-content: center; gap: .8rem; }
+  .welcome-popup__mobile-actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    min-height: 46px;
+    padding: .7rem 1rem;
+    border-radius: 99px;
+    background: #5b3022;
+    color: #fff;
+    font-size: .58rem;
+    font-weight: 600;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+  }
+  .welcome-popup__mobile-actions img { width: 52px; height: 52px; padding: 3px; border-radius: .45rem; background: #fff; }
+  .welcome-popup__close { top: .75rem; right: .75rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-popup__card { transition: none; }
+  .welcome-popup__timer { animation: none !important; }
+}
+
 @media (max-width: 1050px) {
   .header { backdrop-filter: none; }
   .nav { min-height: 100svh; background: rgba(91, 61, 31, .98); }

@@ -5,6 +5,31 @@ const header = document.querySelector('[data-header]');
 const menu = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 const toast = document.querySelector('.booking-toast');
+const welcomePopup = document.querySelector('[data-welcome-popup]');
+
+if (welcomePopup) {
+  const previousFocus = document.activeElement;
+  const closeButton = welcomePopup.querySelector('.welcome-popup__close');
+  const closePopup = () => {
+    clearTimeout(window.welcomePopupTimer);
+    welcomePopup.classList.remove('is-open');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      welcomePopup.hidden = true;
+      previousFocus?.focus?.();
+    }, 350);
+  };
+
+  requestAnimationFrame(() => {
+    welcomePopup.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    closeButton.focus();
+    window.welcomePopupTimer = setTimeout(closePopup, 5000);
+  });
+
+  welcomePopup.querySelectorAll('[data-popup-close]').forEach(button => button.addEventListener('click', closePopup));
+  addEventListener('keydown', event => event.key === 'Escape' && closePopup(), { once: true });
+}
 
 const syncHeader = () => header.classList.toggle('scrolled', scrollY > 24);
 syncHeader();
