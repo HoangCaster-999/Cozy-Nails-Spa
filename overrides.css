@@ -19,6 +19,77 @@
 .booking { background: #7b542c; }
 footer { background: #342a21; }
 
+/* Facebook + Instagram */
+.social-links {
+  display: flex;
+  gap: .65rem;
+}
+
+.social-links--hero {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  right: clamp(1rem, 3vw, 3rem);
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+
+.social-link {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(123, 84, 44, .16);
+  border-radius: 50%;
+  background: rgba(255, 253, 249, .9);
+  box-shadow: 0 8px 24px rgba(72, 49, 27, .1);
+  color: var(--wine);
+  transition: transform .25s, background .25s, color .25s;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  background: var(--wine);
+  color: #fff;
+}
+
+.social-link:focus-visible {
+  outline: 2px solid var(--sand-dark);
+  outline-offset: 3px;
+}
+
+.social-link svg {
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+}
+
+.booking-socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.booking-socials > span {
+  color: rgba(255, 255, 255, .7);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.booking-socials .social-link {
+  width: 42px;
+  height: 42px;
+  border-color: rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, .1);
+  box-shadow: none;
+  color: #fff;
+}
+
+.booking-socials .social-link:hover { background: #fff; color: var(--wine); }
+
 /* Grand-opening popup */
 .welcome-popup {
   position: fixed;
@@ -119,6 +190,12 @@ footer { background: #342a21; }
 @keyframes popup-timer { to { transform: scaleX(1); } }
 
 @media (max-width: 760px) {
+  .social-links--hero {
+    top: 105px;
+    right: .85rem;
+    transform: none;
+  }
+  .social-link { width: 42px; height: 42px; }
   .welcome-popup { padding: .75rem; }
   .welcome-popup__card {
     width: min(380px, 96vw);

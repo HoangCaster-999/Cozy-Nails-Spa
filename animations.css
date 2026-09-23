@@ -55,10 +55,13 @@
 
 /* ---------- 5. getrapte veeg over de knoppen (steps) ---------- */
 .header-book,
-.round-book,
 .booking-button,
 .instagram-link {
   position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.round-book {
   overflow: hidden;
   isolation: isolate;
 }
