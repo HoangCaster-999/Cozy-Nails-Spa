@@ -1,5 +1,4 @@
-// Paste the final Setmore booking URL here when it is available.
-const SETMORE_BOOKING_URL = '';
+const SETMORE_BOOKING_URL = 'https://cozynailsspa.setmore.com';
 
 const header = document.querySelector('[data-header]');
 const menu = document.querySelector('.menu-toggle');
