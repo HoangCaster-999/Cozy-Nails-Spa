@@ -63,6 +63,11 @@ document.querySelectorAll('.booking-link').forEach(link => {
   });
 });
 
+document.querySelector('.service-arches').addEventListener('click', event => {
+  const link = event.target.closest('[data-service-price]');
+  if (link) document.querySelector(`[data-price-tab="${link.dataset.servicePrice}"]`).click();
+});
+
 document.querySelector('.price-tabs').addEventListener('click', event => {
   const button = event.target.closest('[data-price-tab]');
   if (!button) return;

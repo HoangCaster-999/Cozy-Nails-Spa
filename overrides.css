@@ -14,7 +14,6 @@
 .header-book { background: var(--wine); }
 .hero-halo { background: radial-gradient(circle, rgba(234, 211, 169, .72), rgba(249, 237, 216, .48) 44%, transparent 70%); }
 .soft-orbit { background: radial-gradient(circle, rgba(245, 224, 190, .82), rgba(234, 215, 181, .34) 48%, transparent 70%); }
-.service-image { background: radial-gradient(circle, #f7ead5 0 35%, rgba(235, 218, 188, .45) 50%, transparent 70%); }
 .gallery { background: #fcf8f1; }
 .booking { background: #7b542c; }
 footer { background: #342a21; }
