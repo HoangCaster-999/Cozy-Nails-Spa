@@ -10,13 +10,58 @@
   --line: rgba(132, 101, 61, .2);
 }
 
-.header { background: rgba(255, 253, 249, .94); }
+.header { background: rgba(250, 242, 232, .96); }
 .header-book { background: var(--wine); }
 .hero-halo { background: radial-gradient(circle, rgba(234, 211, 169, .72), rgba(249, 237, 216, .48) 44%, transparent 70%); }
 .soft-orbit { background: radial-gradient(circle, rgba(245, 224, 190, .82), rgba(234, 215, 181, .34) 48%, transparent 70%); }
-.gallery { background: #fcf8f1; }
-.booking { background: #7b542c; }
-footer { background: #342a21; }
+.hero, .about, .services, .gallery, .booking, .faq, .contact, footer {
+  background-color: #faf2e8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero { background-image: url("assets/backgrounds/cozy-hero-pattern-v1.webp"); }
+.about { background-image: url("assets/backgrounds/cozy-about-pattern-v1.webp"); }
+.services, .gallery { background-image: url("assets/backgrounds/cozy-services-pattern-v1.webp"); }
+.services { background-size: 100% auto; background-position: center top; }
+.booking, .contact, footer { background-image: url("assets/backgrounds/cozy-booking-pattern-v1.webp"); }
+.faq { background-image: linear-gradient(rgba(250, 242, 232, .6), rgba(250, 242, 232, .6)), url("assets/backgrounds/cozy-about-pattern-v1.webp"); }
+.hero-halo, .soft-orbit { display: none; }
+.brand { padding: 0; background: transparent; color: var(--wine); }
+.brand img { width: 62px; height: 62px; }
+.booking { color: var(--ink); }
+.booking .eyebrow, .booking h2, .booking h2 em { color: var(--wine); }
+.booking-inner > p:not(.eyebrow), .booking-socials > span { color: var(--muted); }
+.booking-button { background: var(--wine); color: #fff; }
+.booking-button:hover { background: var(--sand-dark); }
+.booking-art { border-color: var(--line); box-shadow: none; }
+.booking-art span { -webkit-text-stroke-color: rgba(123, 84, 44, .14); }
+.booking-art i { color: var(--sand-dark); }
+.booking-socials .social-link { border-color: var(--line); background: rgba(255, 253, 249, .9); color: var(--wine); }
+.booking-socials .social-link:hover { background: var(--wine); color: #fff; }
+footer { color: var(--muted); }
+footer h3, .footer-brand p, .footer-brand span, footer a:hover { color: var(--wine); }
+.footer-brand img { width: 130px; height: 130px; }
+.copyright { border-top-color: var(--line); }
+.price-panel { background: rgba(250, 242, 232, .92); }
+.contact-map { max-width: 1180px; margin: 3rem auto 0; }
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 36vw, 480px);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--ivory);
+}
+.contact-map .instagram-link { margin-top: 1.5rem; }
+.about-copy { text-align: left; }
+.about-copy h2 { font-size: clamp(2rem, 3.2vw, 3.5rem); line-height: 1.15; }
+.about-copy .gold-line { margin-inline: 0; }
+.about-copy > p:not(.eyebrow), .about-copy > p:last-of-type {
+  max-width: none;
+  margin: 1.2rem 0 0;
+  color: var(--muted);
+}
 
 /* Facebook + Instagram */
 .social-links {
@@ -319,7 +364,7 @@ footer { background: #342a21; }
     gap: .75rem;
     padding-inline: 14px;
     border-bottom: 1px solid rgba(123, 84, 44, .2);
-    background: #fffdf9;
+    background: #faf2e8;
     box-shadow: 0 8px 26px rgba(72, 49, 27, .1);
   }
 
@@ -332,7 +377,7 @@ footer { background: #342a21; }
     white-space: nowrap;
   }
 
-  .brand img { width: 36px; height: 36px; }
+  .brand img { width: 48px; height: 48px; }
 
   .menu-toggle {
     display: flex;
