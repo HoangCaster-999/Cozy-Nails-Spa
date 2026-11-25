@@ -18,7 +18,7 @@ const { chromium } = require('playwright');
     assert.deepEqual(await cards.locator('h3').allTextContents(), [
       'Manicure', 'Pedicure', 'BIAB', 'Builder Gel', 'Rubber Base', 'Gel X', 'Japanese Head Spa'
     ]);
-    assert.equal(await page.locator('.price-grid > div').count(), 34);
+    assert.equal(await page.locator('.price-grid > div').count(), 38);
 
     for (const [width, firstRowCount] of [[1440, 4], [900, 2], [390, 1]]) {
       await page.setViewportSize({ width, height: 1000 });
@@ -45,7 +45,7 @@ const { chromium } = require('playwright');
     await page.keyboard.press('Enter');
     assert.equal(await page.locator('[data-price-tab="manicure"]').getAttribute('aria-selected'), 'true');
     assert.deepEqual(errors, []);
-    console.log('PASS: 7 service cards, 34 price rows, desktop/tablet/mobile layouts, images, price links and keyboard activation.');
+    console.log('PASS: 7 service cards, 38 price rows, desktop/tablet/mobile layouts, images, price links and keyboard activation.');
   } finally {
     await browser.close();
   }
